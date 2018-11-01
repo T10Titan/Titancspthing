@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		850FD146218B3FF800A9BCE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FD145218B3FF800A9BCE8 /* AppDelegate.swift */; };
-		850FD148218B3FF800A9BCE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FD147218B3FF800A9BCE8 /* ViewController.swift */; };
+		850FD148218B3FF800A9BCE8 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850FD147218B3FF800A9BCE8 /* DrawingViewController.swift */; };
 		850FD14B218B3FF800A9BCE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850FD149218B3FF800A9BCE8 /* Main.storyboard */; };
 		850FD14D218B3FF900A9BCE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850FD14C218B3FF900A9BCE8 /* Assets.xcassets */; };
 		850FD150218B3FF900A9BCE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 850FD14E218B3FF900A9BCE8 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		850FD142218B3FF800A9BCE8 /* Titancspthing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Titancspthing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		850FD145218B3FF800A9BCE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		850FD147218B3FF800A9BCE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		850FD147218B3FF800A9BCE8 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		850FD14A218B3FF800A9BCE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		850FD14C218B3FF900A9BCE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850FD14F218B3FF900A9BCE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,10 +54,7 @@
 		850FD144218B3FF800A9BCE8 /* Titancspthing */ = {
 			isa = PBXGroup;
 			children = (
-				850FD14C218B3FF900A9BCE8 /* Assets.xcassets */,
-				850FD151218B3FF900A9BCE8 /* Info.plist */,
 				850FD15A218B408A00A9BCE8 /* Resources */,
-				850FD147218B3FF800A9BCE8 /* ViewController.swift */,
 				850FD158218B403B00A9BCE8 /* Controller */,
 				850FD159218B404E00A9BCE8 /* View */,
 			);
@@ -67,6 +64,7 @@
 		850FD158218B403B00A9BCE8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				850FD147218B3FF800A9BCE8 /* DrawingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -84,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				850FD145218B3FF800A9BCE8 /* AppDelegate.swift */,
+				850FD151218B3FF900A9BCE8 /* Info.plist */,
+				850FD14C218B3FF900A9BCE8 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				850FD148218B3FF800A9BCE8 /* ViewController.swift in Sources */,
+				850FD148218B3FF800A9BCE8 /* DrawingViewController.swift in Sources */,
 				850FD146218B3FF800A9BCE8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Titancspthing/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Titancspthing/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Titancspthing/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Titancspthing/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
