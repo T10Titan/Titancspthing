@@ -53,6 +53,9 @@
                                 <rect key="frame" x="171" y="527" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="I7o-x1-bz2" kind="show" id="UF8-pK-mUq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,6 +88,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </collectionViewCell>
                         </cells>
                         <connections>

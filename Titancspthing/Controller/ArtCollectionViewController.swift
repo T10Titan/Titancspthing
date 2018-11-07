@@ -8,11 +8,37 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "artIdentifier"
 
 class ArtCollectionViewController: UICollectionViewController
 {
+    
+    //MARK: Data members or Creativity Screen
+    private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+    private let itemsPerRowCompact : CGFloat = 4
+    private let itemsPerRowNormal : CGFloat = 6
+    
+    private let creativeCS: [UIImage?] =
+    {
+        return
+        [
+            UIImage(named: ""),
+            UIImage(named: ""),
+            UIImage(named: "")
 
+        ]
+    }()
+
+    private let labels : [String] =
+    {
+        return [
+        "Smelly hand",
+        "Hot Dog",
+        "XP"
+        ]
+    }()
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
