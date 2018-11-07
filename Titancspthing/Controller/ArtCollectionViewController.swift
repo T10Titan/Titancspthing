@@ -22,9 +22,9 @@ class ArtCollectionViewController: UICollectionViewController
     {
         return
         [
-            UIImage(named: ""),
-            UIImage(named: ""),
-            UIImage(named: "")
+            UIImage(named: "Monstorhand"),
+            UIImage(named: "this is fine"),
+            UIImage(named: "Window")
 
         ]
     }()
@@ -38,6 +38,7 @@ class ArtCollectionViewController: UICollectionViewController
         ]
     }()
     
+    //MARK: - Lifecycle
     
     override func viewDidLoad()
     {
@@ -78,7 +79,7 @@ class ArtCollectionViewController: UICollectionViewController
         return 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
@@ -89,6 +90,24 @@ class ArtCollectionViewController: UICollectionViewController
 
     // MARK: UICollectionViewDelegate
 
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRowCompact
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
@@ -104,7 +123,8 @@ class ArtCollectionViewController: UICollectionViewController
     */
 
     /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+   
+     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
         return false
     }
@@ -118,4 +138,11 @@ class ArtCollectionViewController: UICollectionViewController
     }
     */
 
+    
+    
+    
+    
+    
+    
+    
 }
