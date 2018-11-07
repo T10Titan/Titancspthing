@@ -44,13 +44,13 @@ public class DrawingView: UIView
         return figure
     }
     
-    private func drawTurtle() -> Void
+    private func drawThing() -> Void
     {
         let logo = UIBezierPath()
         UIColor.white.setFill()
-        logo.move(to: CGPoint(x: 50, y: 250))
-        logo.addLine(to: CGPoint(x: 100, y: 300))
-        logo.addLine(to: CGPoint(x: 50, y: 350))
+        logo.move(to: CGPoint(x: 156, y: 250))
+        logo.addLine(to: CGPoint(x: 10, y: 300))
+        logo.addLine(to: CGPoint(x: 200, y: 350))
         logo.close()
         logo.fill()
     }
