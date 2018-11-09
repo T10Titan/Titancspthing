@@ -20,12 +20,11 @@ class ArtCollectionViewController: UICollectionViewController
     
     private let creativeCS: [UIImage?] =
     {
-        return
-        [
+        return [
             UIImage(named: "Monstorhand"),
             UIImage(named: "this is fine"),
-            UIImage(named: "Window")
-
+            UIImage(named: "Window"),
+            UIImage(named: "I robot can speek you")
         ]
     }()
 
@@ -34,7 +33,8 @@ class ArtCollectionViewController: UICollectionViewController
         return [
         "Smelly hand",
         "Hot Dog",
-        "XP"
+        "XP",
+        "idyut"
         ]
     }()
     
@@ -47,7 +47,6 @@ class ArtCollectionViewController: UICollectionViewController
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
@@ -81,11 +80,13 @@ class ArtCollectionViewController: UICollectionViewController
 
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
     
-        // Configure the cell
+        artCell.backgroundColor = .black
+        artCell.artImage.image = creativeCS[indexPath.row]
+        artCell.artLabel.text = labels[indexPath.row]
     
-        return cell
+        return artCell
     }
 
     // MARK: UICollectionViewDelegate
@@ -101,11 +102,20 @@ class ArtCollectionViewController: UICollectionViewController
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
     
+   
     
-    
-    
-    
-    
+    public func collectionView(_collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               insetForSectionoAt section: Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
+    public func collectionView(_collectionView: UICollectionView,
+                               layout collectionViewLayout: UICollectionViewLayout,
+                               minimuLineSpaceingForSectionAt section: Int) -> CGFloat
+    {
+        return sectionInsets.left
+    }
     
     
     /*

@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="712.79999999999995" y="31.934032983508249"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Art Collection View Controller-->
         <scene sceneID="mth-MR-wfn">
             <objects>
-                <collectionViewController id="I7o-x1-bz2" sceneMemberID="viewController">
+                <collectionViewController id="I7o-x1-bz2" customClass="ArtCollectionViewController" customModule="Titancspthing" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="X6k-DQ-e8g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArtCell" id="70B-vC-Jsv">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="artIdentifier" id="70B-vC-Jsv" customClass="ArtCell" customModule="Titancspthing" customModuleProvider="target">
                                 <rect key="frame" x="87.5" y="0.0" width="200" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -103,12 +103,17 @@
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="krG-ez-vto" firstAttribute="centerY" secondItem="70B-vC-Jsv" secondAttribute="centerY" id="8Wo-Zd-jOY"/>
-                                    <constraint firstItem="krG-ez-vto" firstAttribute="top" secondItem="70B-vC-Jsv" secondAttribute="topMargin" constant="-34" id="QOn-5c-bhb"/>
+                                    <constraint firstItem="krG-ez-vto" firstAttribute="top" secondItem="70B-vC-Jsv" secondAttribute="topMargin" id="QOn-5c-bhb"/>
                                     <constraint firstItem="krG-ez-vto" firstAttribute="centerX" secondItem="70B-vC-Jsv" secondAttribute="centerX" id="cg4-8O-E7H"/>
                                     <constraint firstItem="krG-ez-vto" firstAttribute="leading" secondItem="70B-vC-Jsv" secondAttribute="leadingMargin" constant="-86" id="clg-1l-pcH"/>
                                     <constraint firstItem="krG-ez-vto" firstAttribute="centerX" secondItem="9Un-oz-IqQ" secondAttribute="centerX" id="qcj-ks-rt6"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="250"/>
+                                <connections>
+                                    <outlet property="ImageView" destination="krG-ez-vto" id="kpC-wx-DzG"/>
+                                    <outlet property="artImage" destination="krG-ez-vto" id="cHQ-iG-wg4"/>
+                                    <outlet property="artLabel" destination="9Un-oz-IqQ" id="dfE-t2-rcf"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
